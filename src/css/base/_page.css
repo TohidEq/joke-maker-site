@@ -46,7 +46,7 @@ body{
         text-lg sm:text-xl
 
 }
-.App>form>button{
+.App>form button{
     @apply block 
         bg-white-c 
         bg-opacity-90
@@ -63,9 +63,9 @@ body{
         text-xl sm:text-2xl mx-auto rounded-xl
 }
 
-.App>form>button:hover{
+.App>form button:hover{
     box-shadow: 0px 4px 0px rgba(0,0, 0, 0.40)
 }
-.App>form>button:active{
+.App>form button:active{
     box-shadow: 0px 2px 5px rgba(0,0, 0, 0.25)
 }
