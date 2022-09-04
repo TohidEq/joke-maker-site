@@ -9,7 +9,10 @@ module.exports = {
       
     },
     colors: {
-      'custom-color-name': "#123456"
+      'red-c': "#C04848",
+      'purple-c': "#480048",
+      'white-c': "#ffffff",
+      'black-c': "#0d0D0D"
       
 
 

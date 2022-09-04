@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+body{
+    font-family: 'Patrick Hand', cursive;
+    @apply
+        bg-gradient-to-br 
+        from-red-c to-purple-c 
+        text-white-c
+        h-screen ;
+}
+
+.App *{
+    @apply transition-all duration-150
+}
+.App {
+    @apply transition-all duration-150
+        mx-auto max-w-sm px-4
+}
+.App>h1{
+    @apply text-center text-4xl sm:text-5xl my-3
+}
+.App>.joke{
+    @apply  py-3 px-2 md:px-4
+        min-h-[230px]
+         bg-white-c bg-opacity-10 rounded-xl
+         text-lg sm:text-xl;
+}
+
+.App>form{
+    @apply
+         mt-3
+
+}
+
+.App>form>.inputs{
+    @apply px-0 md:px-4 max-w-sm
+        mx-auto 
+        flex justify-center gap-x-3
+        flex-wrap 
+        
+}
+
+.App>form>.inputs>input{
+    @apply  p-2 appearance-none leading-tight 
+        bg-white-c bg-opacity-10 rounded-xl mb-3 
+        focus:bg-opacity-20 outline-white-c w-5/6 sm:w-36 
+        text-lg sm:text-xl
+
+}
+.App>form>button{
+    @apply block 
+        bg-white-c 
+        bg-opacity-90
+        text-black-c
+
+        hover:bg-opacity-70
+        hover:-translate-y-1  
+
+        active:bg-opacity-10
+        active:text-white-c
+        active:-translate-y-0.5
+
+         p-2
+        text-xl sm:text-2xl mx-auto rounded-xl
+}
+
+.App>form>button:hover{
+    box-shadow: 0px 4px 0px rgba(0,0, 0, 0.40)
+}
+.App>form>button:active{
+    box-shadow: 0px 2px 5px rgba(0,0, 0, 0.25)
+}
