@@ -1,21 +1,43 @@
 import React from 'react';
+import { render } from '@testing-library/react';
+import useRandomJokes from './Hooks/useRandomJokes';
 
 
 function App() {
+  
+  const firstNameRef = React.useRef<HTMLInputElement>(null)
+  const lastNameRef = React.useRef<HTMLInputElement>(null);
+
+  const [firstName,setFirstName] = React.useState("Tohid")
+  const [lastName,setLastName] = React.useState("Eghdami")
+  
+  const jokeText = useRandomJokes({firstName,lastName});
+
+
+  const clickHandle = (e:any)=>{
+    e.preventDefault(); // stop refresh page //
+    setFirstName(firstNameRef.current?.value||"Tohid")
+    setLastName(lastNameRef.current?.value||" ")
+    
+
+  }
+
+
+
   return (
     <div className="App ">
       <h1>Joke Maker</h1>
 
       <div className="joke">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia molestiae ab sunt, atque tenetur velit enim tempora autem in, porro, eos praesentium! Voluptatum odit impedit eveniet similique aliquid sit. Eaque?
+        {jokeText}
       </div>
 
       <form className='form'>
         <div className="inputs">
-          <input placeholder='First Name' />
-          <input placeholder='Last Name' />
+          <input ref={firstNameRef} placeholder='First Name' />
+          <input ref={lastNameRef} placeholder='Last Name' />
         </div>
-        <button>Generate Joke</button>
+        <button onClick={clickHandle}>Generate Joke</button>
       </form>
     </div>
   );
